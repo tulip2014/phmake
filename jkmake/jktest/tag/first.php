@@ -25,7 +25,7 @@ function fab($n)
     } elseif ($n == 2) {
         return 1;
     } else {
-        return fab($n - 1) + fab($n - 2);
+        return fab($n - 1) + fab($n - 2); 
     }
 }
 
