@@ -13,24 +13,25 @@
  * Date: 2016/4/5
  * Time: 22:59
  */
-
-echo "hello php!";
-$a = 10;
-echo $a;
+require_once "retangle.php";
 
 function fab($n)
 {
-    if ($n <= 1) {
-        return 1;
-    } elseif ($n == 2) {
-        return 1;
+    $arr = array("key"=>"balue");
+    print_r($arr);
+    echo json_encode($arr);
+
+    $file = fopen("test.txt", "w");
+    if ($file) {
+        fwrite($file, "testadf");
+        fclose($file);
     } else {
-        return fab($n - 1) + fab($n - 2); 
+        echo "create file fail";
     }
+
 }
 
 echo fab(10);
-echo '良好';
 
 ?>
 
